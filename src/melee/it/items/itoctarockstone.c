@@ -133,8 +133,8 @@ void it_802E89D0(Item_GObj* gobj, f32 horiz_speed, f32 min_vy, f32 max_vy)
     HSD_GObj* gp;
     Item* ip = GET_ITEM(gobj);
     Vec3 pos;
-    f32 x;
     f32 speed;
+    f32 x;
     float new_var;
 
     ip->x40_vel.x = horiz_speed * ip->facing_dir;
