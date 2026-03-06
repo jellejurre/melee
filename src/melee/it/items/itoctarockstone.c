@@ -137,8 +137,8 @@ void it_802E89D0(Item_GObj* gobj, f32 horiz_speed, f32 min_vy, f32 max_vy)
     f32 x;
     float new_var;
 
-    ip->x40_vel.z = 0.0f;
     ip->x40_vel.x = horiz_speed * ip->facing_dir;
+    ip->x40_vel.z = 0.0f;
 
     gp = ftLib_8008627C(&ip->pos, NULL);
     if (gp != NULL) {

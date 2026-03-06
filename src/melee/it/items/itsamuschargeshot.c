@@ -195,8 +195,8 @@ void it_802B5974(Item_GObj* gobj)
 
 void it_2725_Logic108_PickedUp(Item_GObj* gobj)
 {
-    Item* ip = GET_ITEM(gobj);
     HSD_JObj* grandchild = itGetJObjGrandchild(gobj);
+    Item* ip = GET_ITEM(gobj);
 
     Item_80268E5C(gobj, 0, ITEM_ANIM_UPDATE);
     switch (ip->kind) {
