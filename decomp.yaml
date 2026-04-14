@@ -1,0 +1,18 @@
+platform: gc
+tools:
+  transmuter:
+    compiler: |
+      build/tools/wibo build/tools/sjiswrap.exe build/compilers/GC/1.2.5n/mwcceppc.exe \
+        -nowraplines -cwd source \
+        -Cpp_exceptions off -proc gekko -fp hardware -align powerpc \
+        -nosyspath -fp_contract on -O4,p -multibyte -enum int -nodefaults \
+        -inline auto \
+        -pragma 'cats off' \
+        -pragma 'warn_notinlined off' \
+        -RTTI off -str reuse \
+        -DBUILD_VERSION=0 -DVERSION_GALE01 \
+        -maxerrors 1 -msgstyle std -warn off -warn iserror \
+        -i src -i src/MSL -i src/Runtime -i extern/dolphin/include \
+        -i src/melee -i src/melee/ft/chara -i src/sysdolphin \
+        -lang=c -c \
+        "{{inputPath}}" -o "{{outputPath}}"
